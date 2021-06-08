@@ -2,6 +2,7 @@ import praw
 import pandas as pd
 
 
+
 reddit = praw.Reddit(
     client_id="O7ROFNDyYMuErA",
     client_secret="8W77vXPl2bHiossycbVvhMFMlC2iAQ",
@@ -21,8 +22,6 @@ posts = pd.DataFrame(posts, columns=['title'])
 
 newposts=posts["title"].str.split(" ")
 print(newposts)
-
-
 
 
 newposts.to_csv(r'/Users/Evan/Desktop/CanInvestorTopPost.csv', index = False)
