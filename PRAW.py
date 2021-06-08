@@ -14,8 +14,8 @@ print(reddit.user.me())
 
 # get 100 top posts this week from the personalfinanceCanada subreddit
 posts = []
-pfc_subreddit = reddit.subreddit('personalfinanceCanada')
-for post in pfc_subreddit.top(time_filter='week', limit=1000):
+CanInvestor = reddit.subreddit('CanadianInvestor')
+for post in CanInvestor.top(time_filter='week', limit=1000):
     posts.append([post.title])
 posts = pd.DataFrame(posts, columns=['title'])
 
@@ -25,7 +25,7 @@ print(newposts)
 
 
 
-newposts.to_csv(r'/Users/Evan/Desktop/pfcTopPost.csv', index = False)
+newposts.to_csv(r'/Users/Evan/Desktop/CanInvestorTopPost.csv', index = False)
 
 
 # get 100 top posts this week from the personalfinanceCanada subreddit
